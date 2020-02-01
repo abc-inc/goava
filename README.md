@@ -13,6 +13,7 @@ utilities for concurrency, I/O, hashing, primitives, strings, and more!
 - [x] [base/Preconditions](https://github.com/google/guava/wiki/PreconditionsExplained) => [github.com/abc-inc/goava/base/precond](https://github.com/abc-inc/goava/tree/master/base/precond)
 - [ ] [base/Stopwatch](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/base/Stopwatch.html)
 - [ ] [base/Strings](https://github.com/google/guava/wiki/StringsExplained)
+- [x] [collect/ComparisonChain](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/collect/ComparisonChain.html) => [github.com/abc-inc/goava/collect/compchain](https://github.com/abc-inc/goava/tree/master/collect/compchain)
 - [ ] [collect/Ordering](https://github.com/google/guava/wiki/OrderingExplained)
 - [ ] [collect/Sets](https://github.com/google/guava/wiki/CollectionUtilitiesExplained#sets)
 - [ ] [eventbus/EventBus](https://github.com/google/guava/wiki/EventBusExplained)
