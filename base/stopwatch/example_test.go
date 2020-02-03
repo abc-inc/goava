@@ -12,18 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package hostandport
+package stopwatch_test
 
 import (
-	"testing"
+	"fmt"
+	"time"
 
-	. "github.com/stretchr/testify/require"
+	"github.com/abc-inc/goava/base/stopwatch"
+	"github.com/jonboulle/clockwork"
 )
 
-func Test_getHostAndPortFromBracketedHost(t *testing.T) {
-	_, err := getHostAndPortFromBracketedHost("1::1")
-	Error(t, err)
+func Example() {
+	clock := clockwork.NewFakeClock()
+	s := stopwatch.CreateStartedClock(clock)
 
-	_, err = getHostAndPortFromBracketedHost("[1::1]80")
-	Error(t, err)
+	// doSomething()
+	clock.Advance(12300 * time.Microsecond) // for the sake of the example, we turn the watch hand
+
+	s.Stop() // optional
+	duration := s.ElapsedTime(time.Microsecond)
+	fmt.Println(duration)
+	fmt.Println("time:", s.String())
+	// Output:
+	// 12300
+	// time: 12.30 ms
 }

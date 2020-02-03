@@ -14,6 +14,8 @@
 
 package ints
 
+import "github.com/abc-inc/goava/base/precond"
+
 // Compare8 compares the two specified int8 values.
 //
 // It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
@@ -26,4 +28,13 @@ func Compare8(a, b int8) int {
 	default:
 		return 1
 	}
+}
+
+// CheckedCast returns the int32 value that is equal to value, if possible.
+func CheckedCast8(v int64) (int8, error) {
+	r := int8(v)
+	if err := precond.CheckArgumentf(int64(r) == v, "out of range: %d", v); err != nil {
+		return 0, err
+	}
+	return r, nil
 }

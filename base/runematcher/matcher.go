@@ -65,7 +65,7 @@ import (
 // Also offers basic text processing methods based on this function.
 // Implementations are strongly encouraged to be side-effect-free and immutable.
 //
-// Throughout the documentation of this class, the phrase "matching character" is used to mean
+// Throughout the documentation of this type, the phrase "matching character" is used to mean
 // "any rune value r for which Matches(r) returns true".
 type Matcher interface {
 	fmt.Stringer

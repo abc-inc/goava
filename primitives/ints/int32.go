@@ -14,6 +14,8 @@
 
 package ints
 
+import "github.com/abc-inc/goava/base/precond"
+
 // Compare32 compares the two specified int32 values.
 //
 // It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
@@ -26,4 +28,13 @@ func Compare32(a, b int32) int {
 	default:
 		return 1
 	}
+}
+
+// CheckedCast32 returns the int32 value that is equal to value, if possible.
+func CheckedCast32(v int64) (int32, error) {
+	r := int32(v)
+	if err := precond.CheckArgumentf(int64(r) == v, "out of range: %d", v); err != nil {
+		return 0, err
+	}
+	return r, nil
 }

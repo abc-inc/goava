@@ -10,15 +10,19 @@ utilities for concurrency, I/O, hashing, primitives, strings, and more!
 ## Features
 - [x] [base/CaseFormat](https://github.com/google/guava/wiki/StringsExplained#caseformat) => [github.com/abc-inc/goava/base/casefmt](https://github.com/abc-inc/goava/tree/master/base/casefmt)
 - [x] [base/CharMatcher](https://github.com/google/guava/wiki/StringsExplained#charmatcher) => [github.com/abc-inc/goava/base/runematcher](https://github.com/abc-inc/goava/tree/master/base/runematcher)
+- [x] [base/Optional](https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained#optional) => [github.com/abc-inc/goava/base/opt](https://github.com/abc-inc/goava/tree/master/base/opt)
 - [x] [base/Preconditions](https://github.com/google/guava/wiki/PreconditionsExplained) => [github.com/abc-inc/goava/base/precond](https://github.com/abc-inc/goava/tree/master/base/precond)
-- [ ] [base/Stopwatch](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/base/Stopwatch.html)
+- [x] [base/Stopwatch](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/base/Stopwatch.html) => [github.com/abc-inc/goava/base/stopwatch](https://github.com/abc-inc/goava/tree/master/base/stopwatch)
 - [ ] [base/Strings](https://github.com/google/guava/wiki/StringsExplained)
+- [ ] [cache/Cache](https://github.com/google/guava/wiki/CachesExplained)
 - [x] [collect/ComparisonChain](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/collect/ComparisonChain.html) => [github.com/abc-inc/goava/collect/compchain](https://github.com/abc-inc/goava/tree/master/collect/compchain)
+- [x] [collect/DiscreteDomain](https://github.com/google/guava/wiki/RangesExplained#discrete-domains) => [github.com/abc-inc/goava/collect/domain](https://github.com/abc-inc/goava/tree/master/collect/domain)
 - [ ] [collect/Ordering](https://github.com/google/guava/wiki/OrderingExplained)
-- [ ] [collect/Sets](https://github.com/google/guava/wiki/CollectionUtilitiesExplained#sets)
+- [x] [collect/Sets](https://github.com/google/guava/wiki/CollectionUtilitiesExplained#sets) => [github.com/abc-inc/goava/collect/set](https://github.com/abc-inc/goava/tree/master/collect/set)
 - [ ] [eventbus/EventBus](https://github.com/google/guava/wiki/EventBusExplained)
 - [ ] [io/Files](https://github.com/google/guava/wiki/IOExplained#files)
-- [x] [net/HostAndPort](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/net/HostAndPort.html) => [github.com/abc-inc/goava/net](https://github.com/abc-inc/goava/tree/master/net)
+- [ ] [math](https://github.com/google/guava/wiki/MathExplained)
+- [x] [net/HostAndPort](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/net/HostAndPort.html) => [github.com/abc-inc/goava/net/hostandport](https://github.com/abc-inc/goava/tree/master/net/hostandport)
 - [ ] ...
 
 ## Adding Goava to your project

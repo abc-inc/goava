@@ -12,29 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package ints
-
-import "github.com/abc-inc/goava/base/precond"
-
-// Compare compares the two specified int values.
+// Package domain contains descriptors for discrete comparable domains such as all int instances.
 //
-// It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
-func Compare(a, b int) int {
-	switch {
-	case a == b:
-		return 0
-	case a < b:
-		return -1
-	default:
-		return 1
-	}
-}
-
-// CheckedCast returns the int value that is equal to value, if possible.
-func CheckedCast(v int64) (int, error) {
-	r := int(v)
-	if err := precond.CheckArgumentf(int64(r) == v, "out of range: %d", v); err != nil {
-		return 0, err
-	}
-	return r, nil
-}
+// A discrete domain is one that supports the three basic operations: Next, Previous and Distance, according to their
+// specifications.
+//
+// A discrete domain always represents the entire set of values of its type; it cannot represent partial domains such as
+// "prime integers" or "strings of length 5."
+package domain

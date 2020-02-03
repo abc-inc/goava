@@ -15,6 +15,7 @@
 package precond
 
 import (
+	"errors"
 	"fmt"
 	"strconv"
 )
@@ -152,4 +153,18 @@ func badPositionIndex(index, size int, desc string, args ...interface{}) string 
 	} else { // index > size
 		return fmt.Sprintf("%s (%d) must not be greater than size (%d)", desc, index, size)
 	}
+}
+
+func CheckNonnegative(value int, name string) (int, error) {
+	if value < 0 {
+		return 0, errors.New(name + " cannot be negative but was: " + strconv.Itoa(value))
+	}
+	return value, nil
+}
+
+func CheckNonnegative64(value int64, name string) (int64, error) {
+	if value < 0 {
+		return 0, errors.New(name + " cannot be negative but was: " + strconv.FormatInt(value, 10))
+	}
+	return value, nil
 }

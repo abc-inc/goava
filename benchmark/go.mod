@@ -23,7 +23,6 @@ require (
 	github.com/objectundefined/caseformat v0.0.0-20141130224000-0ea9b22370b3
 	github.com/ozgio/strutil v0.3.0
 	github.com/stoewer/go-strcase v1.1.0
-	github.com/stretchr/testify v1.4.0
 )
 
 replace github.com/abc-inc/goava => ../

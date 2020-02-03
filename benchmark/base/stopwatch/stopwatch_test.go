@@ -12,29 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package ints
+package stopwatch
 
-import "github.com/abc-inc/goava/base/precond"
+import (
+	"fmt"
+	"testing"
+	"time"
 
-// Compare compares the two specified int values.
-//
-// It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
-func Compare(a, b int) int {
-	switch {
-	case a == b:
-		return 0
-	case a < b:
-		return -1
-	default:
-		return 1
+	"github.com/abc-inc/goava/base/stopwatch"
+)
+
+func BenchmarkStopwatch(b *testing.B) {
+	total := int64(0)
+	s := stopwatch.CreateStarted()
+	for i := 0; i < b.N; i++ {
+		_, _ = s.Reset().Start()
+		// here is where you would do something
+		total += s.ElapsedTime(time.Nanosecond)
 	}
+	fmt.Println("total:", total)
 }
 
-// CheckedCast returns the int value that is equal to value, if possible.
-func CheckedCast(v int64) (int, error) {
-	r := int(v)
-	if err := precond.CheckArgumentf(int64(r) == v, "out of range: %d", v); err != nil {
-		return 0, err
+func BenchmarkManual(b *testing.B) {
+	total := 0
+	for i := 0; i < b.N; i++ {
+		start := time.Now()
+		// here is where you would do something
+		total += time.Now().Nanosecond() - start.Nanosecond()
 	}
-	return r, nil
+	fmt.Println("total:", total)
 }
