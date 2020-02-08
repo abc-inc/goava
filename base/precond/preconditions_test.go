@@ -95,3 +95,21 @@ func TestCheckPositionIndex(t *testing.T) {
 	_, err := CheckPositionIndexf(1, 0, "custom %s", "message")
 	EqualError(t, err, "custom message")
 }
+
+func TestCheckNonnegative(t *testing.T) {
+	v, err := CheckNonnegative(0, "a")
+	NoError(t, err)
+	Equal(t, 0, v)
+
+	v, err = CheckNonnegative(-1, "a")
+	EqualError(t, err, "a cannot be negative but was: -1")
+}
+
+func TestCheckNonnegative64(t *testing.T) {
+	v, err := CheckNonnegative64(0, "a")
+	NoError(t, err)
+	Equal(t, int64(0), v)
+
+	v, err = CheckNonnegative64(-1, "a")
+	EqualError(t, err, "a cannot be negative but was: -1")
+}

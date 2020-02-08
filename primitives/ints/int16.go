@@ -16,6 +16,8 @@
 
 package ints
 
+import "github.com/abc-inc/goava/base/precond"
+
 // Compare16 compares the two specified int16 values.
 //
 // It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
@@ -28,4 +30,13 @@ func Compare16(a, b int16) int {
 	default:
 		return 1
 	}
+}
+
+// CheckedCast16 returns the int16 value that is equal to value, if possible.
+func CheckedCast16(v int64) (int16, error) {
+	r := int16(v)
+	if err := precond.CheckArgumentf(int64(r) == v, "out of range: %d", v); err != nil {
+		return 0, err
+	}
+	return r, nil
 }
