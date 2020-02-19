@@ -17,14 +17,14 @@
 package hostandport
 
 import (
-	"github.com/stretchr/testify/require"
+	. "github.com/stretchr/testify/require"
 	"testing"
 )
 
 func Test_getHostAndPortFromBracketedHost(t *testing.T) {
 	_, err := getHostAndPortFromBracketedHost("1::1")
-	require.Error(t, err)
+	Error(t, err)
 
 	_, err = getHostAndPortFromBracketedHost("[1::1]80")
-	require.Error(t, err)
+	Error(t, err)
 }
