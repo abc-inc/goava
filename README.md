@@ -21,6 +21,7 @@ utilities for concurrency, I/O, hashing, primitives, strings, and more!
 - [x] [collect/Sets](https://github.com/google/guava/wiki/CollectionUtilitiesExplained#sets) => [github.com/abc-inc/goava/collect/set](https://github.com/abc-inc/goava/tree/master/collect/set)
 - [ ] [eventbus/EventBus](https://github.com/google/guava/wiki/EventBusExplained)
 - [ ] [io/Files](https://github.com/google/guava/wiki/IOExplained#files)
+- [x] [io/Flusher](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/io/Flushables.html) => [github.com/abc-inc/goava/io](https://github.com/abc-inc/goava/tree/master/io)
 - [ ] [math](https://github.com/google/guava/wiki/MathExplained)
 - [x] [net/HostAndPort](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/net/HostAndPort.html) => [github.com/abc-inc/goava/net/hostandport](https://github.com/abc-inc/goava/tree/master/net/hostandport)
 - [ ] ...
