@@ -19,11 +19,15 @@ utilities for concurrency, I/O, hashing, primitives, strings, and more!
 - [x] [collect/DiscreteDomain](https://github.com/google/guava/wiki/RangesExplained#discrete-domains) => [github.com/abc-inc/goava/collect/domain](https://github.com/abc-inc/goava/tree/master/collect/domain)
 - [ ] [collect/Ordering](https://github.com/google/guava/wiki/OrderingExplained)
 - [x] [collect/Sets](https://github.com/google/guava/wiki/CollectionUtilitiesExplained#sets) => [github.com/abc-inc/goava/collect/set](https://github.com/abc-inc/goava/tree/master/collect/set)
+- [x] [escape/Escaper](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/escape/Escaper.html) => [github.com/abc-inc/goava/escape](https://github.com/abc-inc/goava/tree/master/escape)
 - [ ] [eventbus/EventBus](https://github.com/google/guava/wiki/EventBusExplained)
+- [x] [html/HtmlEscapers](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/html/HtmlEscapers.html) => [github.com/abc-inc/goava/html](https://github.com/abc-inc/goava/tree/master/html)
 - [ ] [io/Files](https://github.com/google/guava/wiki/IOExplained#files)
 - [x] [io/Flusher](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/io/Flushables.html) => [github.com/abc-inc/goava/io](https://github.com/abc-inc/goava/tree/master/io)
 - [ ] [math](https://github.com/google/guava/wiki/MathExplained)
 - [x] [net/HostAndPort](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/net/HostAndPort.html) => [github.com/abc-inc/goava/net/hostandport](https://github.com/abc-inc/goava/tree/master/net/hostandport)
+- [x] [net/UrlEscapers](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/net/UrlEscapers.html) => [github.com/abc-inc/goava/net/url](https://github.com/abc-inc/goava/tree/master/net/url)
+- [x] [xml/XmlEscapers](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/xml/XmlEscapers.html) => [github.com/abc-inc/goava/xml](https://github.com/abc-inc/goava/tree/master/xml)
 - [ ] ...
 
 ## Adding Goava to your project
