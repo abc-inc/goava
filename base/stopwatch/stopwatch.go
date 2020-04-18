@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+// Package stopwatch provides means to measures elapsed time in nanoseconds.
 package stopwatch
 
 import (

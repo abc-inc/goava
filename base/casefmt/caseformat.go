@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+// Package casefmt provides utilities for converting between various ASCII case formats.
 package casefmt
 
 import (

@@ -14,11 +14,5 @@
  * limitations under the License.
  */
 
-// Package domain contains descriptors for discrete comparable domains such as all int instances.
-//
-// A discrete domain is one that supports the three basic operations: Next, Previous and Distance, according to their
-// specifications.
-//
-// A discrete domain always represents the entire set of values of its type; it cannot represent partial domains such as
-// "prime integers" or "strings of length 5."
-package domain
+// Package ints contains static utility functions pertaining to integers.
+package ints

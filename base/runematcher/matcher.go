@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+// Package runematcher provides functions that check whether a rune matches a certain condition.
+// Also offers basic text processing methods based on this function.
 package runematcher
 
 import (

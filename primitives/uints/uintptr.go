@@ -16,7 +16,7 @@
 
 package uints
 
-// Compare compares the two specified uintptr values.
+// ComparePtr compares the two specified uintptr values.
 //
 // It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
 func ComparePtr(a, b uintptr) int {

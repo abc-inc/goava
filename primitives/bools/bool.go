@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
+// Package bools contains static utility functions pertaining to boolean values.
 package bools
 
 // Compare compares the two specified boolean values in the standard way (false is considered less than true).
 //
-// It returns a positive number if only a is true, a negative number if onlyb is true, or zero if a == b.
+// It returns a positive number if only a is true, a negative number if only b is true, or zero if a == b.
 func Compare(a, b bool) int {
 	switch {
 	case a == b:

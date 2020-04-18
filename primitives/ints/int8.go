@@ -32,7 +32,7 @@ func Compare8(a, b int8) int {
 	}
 }
 
-// CheckedCast returns the int32 value that is equal to value, if possible.
+// CheckedCast8 returns the int32 value that is equal to value, if possible.
 func CheckedCast8(v int64) (int8, error) {
 	r := int8(v)
 	if err := precond.CheckArgumentf(int64(r) == v, "out of range: %d", v); err != nil {

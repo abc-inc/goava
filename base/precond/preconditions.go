@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+// Package precond contains convenience function that help a function method or method check whether it was invoked
+// correctly (that is, whether its preconditions were met).
+//
+// If the precondition is not met, the check function returns an error of a specified type, which helps the method
+// in which the error occurred communicate that its caller has made a mistake.
 package precond
 
 import (
@@ -157,6 +162,7 @@ func badPositionIndex(index, size int, desc string, args ...interface{}) string 
 	}
 }
 
+// CheckNonnegative ensures that value is strictly positive.
 func CheckNonnegative(value int, name string) (int, error) {
 	if value < 0 {
 		return 0, errors.New(name + " cannot be negative but was: " + strconv.Itoa(value))
@@ -164,6 +170,7 @@ func CheckNonnegative(value int, name string) (int, error) {
 	return value, nil
 }
 
+// CheckNonnegative64 ensures that value is strictly positive.
 func CheckNonnegative64(value int64, name string) (int64, error) {
 	if value < 0 {
 		return 0, errors.New(name + " cannot be negative but was: " + strconv.FormatInt(value, 10))

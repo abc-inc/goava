@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+// Package opt provides an immutable data type that may contain a non-nil value of any type.
 package opt
 
 import (
@@ -21,12 +22,12 @@ import (
 	"github.com/abc-inc/goava/collect/set"
 )
 
-// Optional is an immutable object that may contain a non-nil reference to another object.
-// Each instance of this type either contains a non-nil reference, or contains nothing (in which case we say that the
-// reference is "absent"); it is never said to "contain nil".
+// Optional is an immutable data type that may contain a non-nil value of any type.
+// Each instance of this type either contains a non-nil value, or contains nothing (in which case we say that the
+// value is "absent"); it is never said to "contain nil".
 //
-// A non-nil Optional reference can be used as a replacement for a nillable reference.
-// It allows you to represent "an object that must be present" and "an object that might be absent" as two distinct
+// A non-nil Optional instance can be used as a replacement for a nillable instance.
+// It allows you to represent "a value that must be present" and "a value that might be absent" as two distinct
 // types in your program, which can aid clarity.
 //
 // Some uses of this type include
@@ -78,12 +79,12 @@ type Optional interface {
 
 var absentInstance = absent{}
 
-// Absent returns an Optional instance with no contained reference.
+// Absent returns an Optional instance with no contained value.
 func Absent() Optional {
 	return absentInstance
 }
 
-// Of returns an Optional instance containing the given non-nil reference.
+// Of returns an Optional instance containing the given non-nil value.
 //
 // To have nil treated as absent, use FromNillable() instead.
 func Of(value interface{}) (Optional, error) {
@@ -93,7 +94,7 @@ func Of(value interface{}) (Optional, error) {
 	return present{value}, nil
 }
 
-// FromNillable returns an Optional instance containing that reference, if it is non-nil.
+// FromNillable returns an Optional instance containing that value, if it is non-nil.
 // Otherwise, it returns an absent instance.
 func FromNillable(value interface{}) Optional {
 	if value == nil {
