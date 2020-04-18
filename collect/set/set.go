@@ -12,10 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Package set provides a data structure that contains no duplicates and models the mathematical set abstraction.
 package set
 
 var present struct{}
 
+// Set is a collection that contains no duplicate elements.
+// More formally, sets contain no pair of elements e1 and e2 such that e1 == e2.
+// As implied by its name, this type models the mathematical set abstraction.
+//
+// Note: Great care must be exercised if mutable objects are used as set elements.
+// The behavior of a set is not specified if the value of an object is changed in a manner that affects equality
+// comparisons while the object is an element in the set.
 type Set struct {
 	m map[interface{}]struct{}
 }
@@ -118,7 +126,7 @@ func (s Set) RetainAll(other Set) bool {
 	return modified
 }
 
-// Removes from this set all of its elements that are contained in the other set (optional operation).
+// RemoveAll removes from this set all of its elements that are contained in the other set (optional operation).
 //
 // This operation effectively modifies this set so that its value is the asymmetric set difference of the two sets.
 func (s Set) RemoveAll(other Set) bool {
@@ -132,7 +140,7 @@ func (s Set) RemoveAll(other Set) bool {
 	return modified
 }
 
-// Removes all the elements from this set (optional operation).
+// Clear removes all the elements from this set (optional operation).
 // The set will be empty after this call returns.
 func (s *Set) Clear() {
 	s.m = make(map[interface{}]struct{})

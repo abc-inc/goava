@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Package compchain provides a utility for performing a chained comparison statement.
 package compchain
 
 // ComparisonChain performs a chained comparison statement.

@@ -12,18 +12,5 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package uints
-
-// ComparePtr compares the two specified uintptr values.
-//
-// It returns a negative value if a is less than b; a positive value if a is greater than b; or zero if they are equal.
-func ComparePtr(a, b uintptr) int {
-	switch {
-	case a == b:
-		return 0
-	case a < b:
-		return -1
-	default:
-		return 1
-	}
-}
+// Package floats contains static utility functions pertaining to floating-point numbers.
+package floats

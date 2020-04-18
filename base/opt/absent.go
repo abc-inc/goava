@@ -21,7 +21,7 @@ import (
 	"github.com/abc-inc/goava/collect/set"
 )
 
-// absent is an implementation of an Optional not containing a reference.
+// absent is an implementation of an Optional not containing a value.
 type absent struct {
 }
 

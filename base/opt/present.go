@@ -22,7 +22,7 @@ import (
 	"github.com/abc-inc/goava/collect/set"
 )
 
-// present is an implementation of an Optional containing a reference.
+// present is an implementation of an Optional containing a value.
 type present struct {
 	value interface{}
 }
