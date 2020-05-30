@@ -14,6 +14,7 @@ utilities for concurrency, I/O, hashing, primitives, strings, and more!
 - [x] [base/Preconditions](https://github.com/google/guava/wiki/PreconditionsExplained) => [github.com/abc-inc/goava/base/precond](https://github.com/abc-inc/goava/tree/master/base/precond)
 - [x] [base/Stopwatch](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/base/Stopwatch.html) => [github.com/abc-inc/goava/base/stopwatch](https://github.com/abc-inc/goava/tree/master/base/stopwatch)
 - [ ] [base/Strings](https://github.com/google/guava/wiki/StringsExplained)
+- [x] [base/Ticker](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/base/Ticker.html) => [github.com/abc-inc/goava/base/ticker](https://github.com/abc-inc/goava/tree/master/base/ticker)
 - [ ] [cache/Cache](https://github.com/google/guava/wiki/CachesExplained)
 - [x] [collect/ComparisonChain](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/collect/ComparisonChain.html) => [github.com/abc-inc/goava/collect/compchain](https://github.com/abc-inc/goava/tree/master/collect/compchain)
 - [x] [collect/DiscreteDomain](https://github.com/google/guava/wiki/RangesExplained#discrete-domains) => [github.com/abc-inc/goava/collect/domain](https://github.com/abc-inc/goava/tree/master/collect/domain)
