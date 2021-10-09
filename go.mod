@@ -14,11 +14,11 @@
 
 module github.com/abc-inc/goava
 
-go 1.13
+go 1.16
 
 require (
-	github.com/jonboulle/clockwork v0.1.0
-	github.com/stretchr/testify v1.4.0
-	golang.org/x/text v0.3.2
-	golang.org/x/tools v0.0.0-20200207224406-61798d64f025
+	github.com/jonboulle/clockwork v0.2.2
+	github.com/stretchr/testify v1.7.0
+	golang.org/x/text v0.3.7
+	golang.org/x/tools v0.1.7
 )
