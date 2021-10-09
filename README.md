@@ -19,7 +19,7 @@ utilities for concurrency, I/O, hashing, primitives, strings, and more!
 - [ ] [cache/Cache](https://github.com/google/guava/wiki/CachesExplained)
 - [x] [collect/ComparisonChain](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/collect/ComparisonChain.html) => [github.com/abc-inc/goava/collect/compchain](https://github.com/abc-inc/goava/tree/master/collect/compchain)
 - [x] [collect/DiscreteDomain](https://github.com/google/guava/wiki/RangesExplained#discrete-domains) => [github.com/abc-inc/goava/collect/domain](https://github.com/abc-inc/goava/tree/master/collect/domain)
-- [ ] [collect/Ordering](https://github.com/google/guava/wiki/OrderingExplained)
+- [x] [collect/Ordering](https://github.com/google/guava/wiki/OrderingExplained) => [github.com/abc-inc/goava/collect/ordering](https://github.com/abc-inc/goava/tree/master/collect/ordering)
 - [x] [collect/Sets](https://github.com/google/guava/wiki/CollectionUtilitiesExplained#sets) => [github.com/abc-inc/goava/collect/set](https://github.com/abc-inc/goava/tree/master/collect/set)
 - [x] [escape/Escaper](https://guava.dev/releases/28.2-jre/api/docs/com/google/common/escape/Escaper.html) => [github.com/abc-inc/goava/escape](https://github.com/abc-inc/goava/tree/master/escape)
 - [ ] [eventbus/EventBus](https://github.com/google/guava/wiki/EventBusExplained)
