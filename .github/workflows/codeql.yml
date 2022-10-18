@@ -1,0 +1,22 @@
+name: Code Scanning
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "**.go"
+      - go.mod
+      - go.sum
+  pull_request:
+    branches: [master]
+    paths:
+      - "**.go"
+      - go.mod
+      - go.sum
+  schedule:
+    - cron: "50 4 15 * *"
+
+jobs:
+  CodeQL-Build:
+    name: Analyze
+    uses: abc-inc/gh-actions-go-workflows/.github/workflows/codeql.yml@master
