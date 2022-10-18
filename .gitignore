@@ -1,16 +1,10 @@
-### Go
-*.test
-*.out
+### VisualStudioCode
+/.vscode/
 
 ### JetBrains
-.idea/
-out/
-*.iml
-*.ipr
-*.iws
-
-### VisualStudioCode
-.vscode/
+/.idea/
 
 ### misc
-*.tmp
+/bin/
+/dist/
+/tmp/
