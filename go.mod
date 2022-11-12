@@ -18,9 +18,9 @@ go 1.19
 
 require (
 	github.com/jonboulle/clockwork v0.3.0
-	github.com/stretchr/testify v1.8.0
+	github.com/stretchr/testify v1.8.1
 	golang.org/x/text v0.4.0
-	golang.org/x/tools v0.1.12
+	golang.org/x/tools v0.3.0
 )
 
 require (

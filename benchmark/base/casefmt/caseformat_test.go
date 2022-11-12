@@ -19,6 +19,7 @@ import (
 	"testing"
 
 	. "github.com/abc-inc/goava/base/casefmt"
+	. "github.com/stretchr/testify/require"
 
 	"github.com/huandu/xstrings"
 	"github.com/iancoleman/strcase"

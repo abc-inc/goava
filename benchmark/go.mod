@@ -14,15 +14,24 @@
 
 module github.com/abc-inc/goava/benchmark
 
-go 1.13
+go 1.19
 
 require (
 	github.com/abc-inc/goava v0.0.0-00010101000000-000000000000
-	github.com/huandu/xstrings v1.3.0
-	github.com/iancoleman/strcase v0.0.0-20191112232945-16388991a334
+	github.com/huandu/xstrings v1.3.3
+	github.com/iancoleman/strcase v0.2.0
 	github.com/objectundefined/caseformat v0.0.0-20141130224000-0ea9b22370b3
-	github.com/ozgio/strutil v0.3.0
-	github.com/stoewer/go-strcase v1.1.0
+	github.com/ozgio/strutil v0.4.0
+	github.com/stoewer/go-strcase v1.2.0
+	github.com/stretchr/testify v1.8.1
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/jonboulle/clockwork v0.3.0 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	golang.org/x/text v0.4.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 replace github.com/abc-inc/goava => ../
