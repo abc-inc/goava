@@ -29,7 +29,7 @@ func Example() {
 	// doSomething()
 	clock.Advance(12300 * time.Microsecond) // for the sake of the example, we turn the watch hand
 
-	s.Stop() // optional
+	_, _ = s.Stop() // optional
 	duration := s.ElapsedTime(time.Microsecond)
 	fmt.Println(duration)
 	fmt.Println("time:", s.String())

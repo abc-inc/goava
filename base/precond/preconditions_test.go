@@ -100,7 +100,7 @@ func TestCheckNonnegative(t *testing.T) {
 	NoError(t, err)
 	Equal(t, 0, v)
 
-	v, err = CheckNonnegative(-1, "a")
+	_, err = CheckNonnegative(-1, "a")
 	EqualError(t, err, "a cannot be negative but was: -1")
 }
 
@@ -109,6 +109,6 @@ func TestCheckNonnegative64(t *testing.T) {
 	NoError(t, err)
 	Equal(t, int64(0), v)
 
-	v, err = CheckNonnegative64(-1, "a")
+	_, err = CheckNonnegative64(-1, "a")
 	EqualError(t, err, "a cannot be negative but was: -1")
 }

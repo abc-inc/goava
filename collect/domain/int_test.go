@@ -86,7 +86,6 @@ func TestInt_Distance(t *testing.T) {
 		Equal(t, int64(math.MinInt32)-math.MaxInt32, v)
 	} else {
 		EqualError(t, err, "int overflow")
-
 	}
 }
 

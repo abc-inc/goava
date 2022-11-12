@@ -26,13 +26,12 @@ type Flusher interface {
 // Flush a Flusher, with control over whether an error may be thrown.
 //
 // If swallow is true, then we don't rethrow an error, but merely log it.
-func Flush(flusher Flusher, swallow bool) error {
-	if err := flusher.Flush(); err != nil && swallow {
-		log.Println("error thrown while flushing Flusher.", err)
-		return nil
-	} else {
+func Flush(flusher Flusher, swallow bool) (err error) {
+	if err = flusher.Flush(); err == nil || !swallow {
 		return err
 	}
+	log.Println("error thrown while flushing Flusher.", err)
+	return nil
 }
 
 // FlushQuietly is equivalent to calling Flush(flusher, true), but with no error in the signature.

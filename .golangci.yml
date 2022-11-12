@@ -24,7 +24,6 @@ linters:
     - godox
     - goimports
     - gosec
-    - lll
     - misspell
     - nolintlint
     - prealloc

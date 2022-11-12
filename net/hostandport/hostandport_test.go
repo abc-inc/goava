@@ -136,13 +136,13 @@ func TestFromParts(t *testing.T) {
 	NoError(t, err)
 	Equal(t, 81, port)
 
-	hp, err = FromParts("gmail.com:80", 81)
+	_, err = FromParts("gmail.com:80", 81)
 	EqualError(t, err, "Host has a port: gmail.com:80")
 
-	hp, err = FromParts("gmail.com", -1)
+	_, err = FromParts("gmail.com", -1)
 	EqualError(t, err, "Port out of range: -1")
 
-	hp, err = FromParts("gmail.com:unknown", 80)
+	_, err = FromParts("gmail.com:unknown", 80)
 	EqualError(t, err, "Unparseable port number: gmail.com:unknown")
 }
 
@@ -157,10 +157,10 @@ func TestFromHost(t *testing.T) {
 	Equal(t, "::1", hp.Host())
 	False(t, hp.HasPort())
 
-	hp, err = FromHost("gmail.com:80")
+	_, err = FromHost("gmail.com:80")
 	Error(t, err)
 
-	hp, err = FromHost("[gmail.com]")
+	_, err = FromHost("[gmail.com]")
 	Error(t, err)
 }
 
@@ -198,7 +198,7 @@ func TestRequireBracketsForIPv6(t *testing.T) {
 	// Non-bracketed IPv6 fails.
 	hp, err := FromString("::1")
 	NoError(t, err)
-	hp, err = hp.RequireBracketsForIPv6()
+	_, err = hp.RequireBracketsForIPv6()
 	Error(t, err)
 }
 

@@ -254,7 +254,6 @@ func trimAndCollapseFrom(m Matcher, str string, replacement rune) string {
 	builder := &strings.Builder{}
 	builder.Grow(last + 1 - first)
 	return finishCollapseFrom(m, runes, first, last+1, replacement, builder, false)
-
 }
 
 func finishCollapseFrom(m Matcher, runes []rune, start, end int, repl rune, builder *strings.Builder, inMatchingGroup bool) string {

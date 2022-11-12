@@ -50,9 +50,11 @@ func (s Set) Contains(e interface{}) bool {
 // The returned slice will be "safe" in that no references to it are maintained by this set.
 // The caller is thus free to modify the returned slice.
 func (s Set) ToArray() []interface{} {
-	var es []interface{}
+	es := make([]interface{}, len(s.m))
+	i := 0
 	for e := range s.m {
-		es = append(es, e)
+		es[i] = e
+		i++
 	}
 	return es
 }

@@ -204,27 +204,27 @@ const US byte = 31
 // (Applicable also to display devices.)
 const SP byte = 32
 
-// SPACE: Alternate name for SP.
+// SPACE is an alternate name for SP.
 const SPACE byte = 32
 
 // DEL (Delete): This character is used primarily to "erase" or "obliterate" erroneous or unwanted
 // characters in perforated tape.
 const DEL byte = 127
 
-// MIN: The minimum value of an ASCII character.
+// MIN is the minimum value of an ASCII character.
 const MIN byte = 0
 
-// MAX: The maximum value of an ASCII character.
+// MAX is the maximum value of an ASCII character.
 const MAX byte = 127
 
-// CASE_MASK is a bit mask which selects the bit encoding ASCII character case.
-const CASE_MASK byte = 0x20
+// caseMask is a bit mask which selects the bit encoding ASCII character case.
+const caseMask byte = 0x20
 
 // ToLowerCase returns the lowercase equivalent if the argument is an uppercase ASCII character.
 // Otherwise, returns the argument.
 func ToLowerCase(c byte) byte {
 	if IsUpperCase(c) {
-		return (c ^ CASE_MASK)
+		return (c ^ caseMask)
 	}
 	return c
 }
@@ -233,7 +233,7 @@ func ToLowerCase(c byte) byte {
 // Otherwise, returns the argument.
 func ToUpperCase(c byte) byte {
 	if IsLowerCase(c) {
-		return (c ^ CASE_MASK)
+		return (c ^ caseMask)
 	}
 	return c
 }

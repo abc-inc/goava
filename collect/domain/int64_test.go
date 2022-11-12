@@ -44,7 +44,7 @@ func TestInt64_OffsetErrors(t *testing.T) {
 	NoError(t, err)
 	Equal(t, int64(-1), v)
 
-	v, err = d.Offset(0, math.MaxUint64)
+	_, err = d.Offset(0, math.MaxUint64)
 	EqualError(t, err, "distance cannot be negative but was: -1")
 }
 

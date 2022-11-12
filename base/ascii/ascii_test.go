@@ -31,10 +31,10 @@ const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func TestCharsIgnored(t *testing.T) {
 	for _, c := range []byte(ignored) {
-		Equal(t, c, ToLowerCase(byte(c)))
-		Equal(t, c, ToUpperCase(byte(c)))
-		False(t, IsLowerCase(byte(c)))
-		False(t, IsUpperCase(byte(c)))
+		Equal(t, c, ToLowerCase(c))
+		Equal(t, c, ToUpperCase(c))
+		False(t, IsLowerCase(c))
+		False(t, IsUpperCase(c))
 	}
 }
 

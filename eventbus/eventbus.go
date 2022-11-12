@@ -44,8 +44,7 @@ func (e *EventBus) Unregister(object interface{}) error {
 //
 // If no subscribers have been subscribed for event's type, and event is not already a DeadEvent, it will be wrapped in
 // a DeadEvent and reposted.
-func (e EventBus) Post(event interface{}) {
-
+func (e *EventBus) Post(event interface{}) {
 	if _, ok := event.(Event); !ok {
 		event = SimpleEvent{event, nil}
 	}
@@ -63,6 +62,6 @@ func (e EventBus) Post(event interface{}) {
 	*/
 }
 
-func (e EventBus) getSubscribers(event interface{}) set.Set {
+func (e *EventBus) getSubscribers(event interface{}) set.Set {
 	return e.SubscriberRegistry.subscribersForType(reflect.TypeOf(event))
 }

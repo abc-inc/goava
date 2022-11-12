@@ -15,11 +15,12 @@
 package stopwatch_test
 
 import (
+	"testing"
+	"time"
+
 	"github.com/abc-inc/goava/base/stopwatch"
 	"github.com/jonboulle/clockwork"
 	. "github.com/stretchr/testify/require"
-	"testing"
-	"time"
 )
 
 func TestCreateStarted(t *testing.T) {
@@ -107,7 +108,6 @@ func TestResetWhileRunning(t *testing.T) {
 	False(t, s.IsRunning())
 	c.Advance(3)
 	Equal(t, 0*time.Nanosecond, s.Elapsed(time.Nanosecond))
-
 }
 
 func TestElapsedWhileRunning(t *testing.T) {

@@ -18,6 +18,8 @@ import (
 	"strings"
 
 	"github.com/abc-inc/goava/base/runematcher"
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
 var wbLowerCamel = runematcher.InRange('A', 'Z')
@@ -47,11 +49,11 @@ func (c LowerCamel) normalizeFirstWord(word string) string {
 
 // To converts the specified string from this format to the specified format.
 //
-// A "best effort" approach is taken; if str does not conform to the assumed format, then the behavior is undefined
+// A "best effort" approach is taken; if str does not conform to the assumed format, then the behavior is undefined,
 // but we make a reasonable effort at converting anyway.
 func (c LowerCamel) To(tgtFmt CaseFormat, str string) string {
 	if _, ok := tgtFmt.(UpperCamel); ok {
-		return strings.Title(str)
+		return cases.Title(language.Und, cases.NoLower).String(str)
 	}
 	return convert(c, tgtFmt, str)
 }
